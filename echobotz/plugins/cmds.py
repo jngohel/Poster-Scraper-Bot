@@ -1,5 +1,5 @@
 from time import monotonic
-from pyrogram.enums import ChatType, ParseMode
+from pyrogram.enums import ChatType
 
 from .. import LOGGER
 from ..eco import echo
@@ -28,7 +28,6 @@ async def _strt(client, message):
             buttons=btns,
             photo=echo.IMG,
             has_spoiler=True,
-            parse_mode=ParseMode.HTML,
         )
     except Exception as e:
         LOGGER.error(str(e))
